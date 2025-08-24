@@ -8,17 +8,13 @@ import Services from './pages/Services';
 import Booking from './pages/Booking';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import AdminDashboard from './pages/admin/Dashboard';
-import AdminBookings from './pages/admin/Bookings';
-import AdminServices from './pages/admin/Services';
-import AdminUsers from './pages/admin/Users';
-import Login from './pages/auth/Login';
-import Register from './pages/auth/Register';
-import Profile from './pages/auth/Profile';
+import Admin from './pages/Admin';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 import BookingConfirmation from './pages/BookingConfirmation';
 import NotFound from './pages/NotFound';
-import ProtectedRoute from './components/auth/ProtectedRoute';
-import AdminRoute from './components/auth/AdminRoute';
+
 
 function App() {
   return (
@@ -118,70 +114,27 @@ function App() {
             } />
             
             {/* Protected Routes */}
-            <Route path="/profile" element={
-              <ProtectedRoute>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Profile />
-                </motion.div>
-              </ProtectedRoute>
+            <Route path="/dashboard" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Dashboard />
+              </motion.div>
             } />
             
             {/* Admin Routes */}
             <Route path="/admin" element={
-              <AdminRoute>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <AdminDashboard />
-                </motion.div>
-              </AdminRoute>
-            } />
-            
-            <Route path="/admin/bookings" element={
-              <AdminRoute>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <AdminBookings />
-                </motion.div>
-              </AdminRoute>
-            } />
-            
-            <Route path="/admin/services" element={
-              <AdminRoute>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <AdminServices />
-                </motion.div>
-              </AdminRoute>
-            } />
-            
-            <Route path="/admin/users" element={
-              <AdminRoute>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <AdminUsers />
-                </motion.div>
-              </AdminRoute>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Admin />
+              </motion.div>
             } />
             
             {/* 404 Route */}
