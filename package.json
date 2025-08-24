@@ -1,0 +1,20 @@
+{
+  "name": "luxe-salon-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack salon booking application with React frontend and Node.js backend",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "start": "cd server && npm start"
+  },
+  "keywords": ["salon", "booking", "react", "nodejs", "fullstack"],
+  "author": "Luxe Salon",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

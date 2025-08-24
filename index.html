@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxe Salon - Premium Hair & Beauty Services</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="logo">💇‍♀️ Luxe Salon</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#booking">Book Now</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Transform Your Beauty</h1>
+        <p>Experience luxury hair & beauty services that make you shine</p>
+        <button class="cta-button" onclick="scrollToBooking()">
+          Book Your Appointment
+        </button>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Our Premium Services</h2>
+        <div class="services-filters">
+          <button class="filter-btn active" data-category="all">
+            All Services
+          </button>
+          <button class="filter-btn" data-category="Hair">Hair</button>
+          <button class="filter-btn" data-category="Skincare">Skincare</button>
+          <button class="filter-btn" data-category="Nails">Nails</button>
+          <button class="filter-btn" data-category="Brows & Lashes">
+            Brows & Lashes
+          </button>
+          <button class="filter-btn" data-category="Wellness">Wellness</button>
+          <button class="filter-btn" data-category="Makeup">Makeup</button>
+          <button class="filter-btn" data-category="Bridal">Bridal</button>
+        </div>
+        <div class="services-grid" id="servicesGrid">
+          <!-- Services will be dynamically loaded -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+      <div class="container">
+        <h2 class="section-title">Book Your Appointment</h2>
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientName">Full Name</label>
+              <input
+                type="text"
+                id="clientName"
+                name="clientName"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="clientEmail">Email Address</label>
+              <input
+                type="email"
+                id="clientEmail"
+                name="clientEmail"
+                placeholder="your.email@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientPhone">Phone Number</label>
+              <input
+                type="tel"
+                id="clientPhone"
+                name="clientPhone"
+                placeholder="(555) 123-4567"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="service">Select Service</label>
+              <select id="service" name="service" required>
+                <option value="">Choose a service...</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointmentDate">Preferred Date</label>
+              <input
+                type="date"
+                id="appointmentDate"
+                name="appointmentDate"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="appointmentTime">Preferred Time</label>
+              <select id="appointmentTime" name="appointmentTime" required>
+                <option value="">Select time...</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="09:30">9:30 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="10:30">10:30 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="13:30">1:30 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="14:30">2:30 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="15:30">3:30 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="16:30">4:30 PM</option>
+                <option value="17:00">5:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Special Requests or Notes</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              placeholder="Tell us about any allergies, preferred stylist, or special requests..."
+            ></textarea>
+          </div>
+
+          <div class="form-group" style="text-align: center">
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem">
+              💖 By booking, you agree to our cancellation policy. Changes must
+              be made 24 hours in advance.
+            </p>
+            <button
+              type="submit"
+              class="cta-button"
+              style="width: 100%; padding: 1.5rem; font-size: 1.3rem"
+            >
+              ✨ Book My Appointment ✨
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2 class="section-title">Our Work Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+          <div class="gallery-item"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin Toggle Button -->
+    <button class="admin-toggle" onclick="toggleAdmin()">📋 Admin</button>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+      <h2>Admin Dashboard</h2>
+      <div style="margin-bottom: 2rem">
+        <h3>Booking Statistics</h3>
+        <div id="bookingStats">
+          <p>Total Bookings: <span id="totalBookings">0</span></p>
+          <p>Pending: <span id="pendingBookings">0</span></p>
+          <p>Confirmed: <span id="confirmedBookings">0</span></p>
+          <p>Today's Revenue: $<span id="todayRevenue">0</span></p>
+        </div>
+      </div>
+
+      <h3>Recent Bookings</h3>
+      <div id="bookingsList">
+        <!-- Bookings will be dynamically loaded -->
+      </div>
+
+      <div style="margin-top: 2rem">
+        <button
+          onclick="exportBookings()"
+          class="cta-button"
+          style="width: 100%"
+        >
+          Export Bookings
+        </button>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>🎉 Booking Confirmed!</h2>
+        <p>
+          Thank you for choosing Luxe Salon! We've received your appointment
+          request and will send you a confirmation email shortly.
+        </p>
+        <p style="font-size: 1rem; opacity: 0.8; margin: 1rem 0">
+          📅 We'll contact you within 2 hours to confirm your appointment time.
+        </p>
+        <button class="close-modal" onclick="closeModal()">Perfect! ✨</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
